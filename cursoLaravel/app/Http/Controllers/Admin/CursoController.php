@@ -45,5 +45,36 @@ class CursoController extends Controller
 
         return redirect()->route('admin.cursos');
     }
-    
+    // editar curso
+    public function editar($id)
+    {
+        $registro = Curso::find($id);
+        return view('admin.cursos.editar',compact('registro'));
+    }
+    // salvar curso
+    public function atualizar(Request $req, $id)
+    {
+        $dados = $req->all();
+        //dd($dados);
+
+        if (isset($dados['publicado'])) {
+            $dados['publicado'] = 'sim';
+        } else {
+            $dados['publicado'] = 'nao';
+        }
+
+        if ($req->hasfile('imagem')) {
+            $imagem = $req->file('imagem');
+            $num = rand(1111,9999);
+            $dir = "img/cursos/";
+            $ex = $imagem->guessClientExtension();
+            $nomeImagem = "imagem_".$num.".".$ex;
+            $imagem->move($dir,$nomeImagem);
+            $dados['imagem'] = $dir."/".$nomeImagem;
+        }
+
+        Curso::find($id)->update($dados);
+
+        return redirect()->route('admin.cursos');
+    }
 }
