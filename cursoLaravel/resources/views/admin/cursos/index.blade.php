@@ -25,7 +25,7 @@
                         <td>{{ $registro->titulo }}</td>
                         <td>{{ $registro->descricao }}</td>
                         <td>{{ $registro->valor }}</td>
-                        <td><img width="120" src="{{ asset($registro->imagem) }}" alt="{{ $registro->titulo }}"></td>
+                        <td><img width="90" height="90" src="{{ asset($registro->imagem) }}" alt="{{ $registro->titulo }}"></td>
                         <td>{{ $registro->publicado }}</td>
                         <td>
                             <a class="btn blue" href="{{ route('admin.cursos.editar',$registro->id) }}">Editar</a>
