@@ -23,6 +23,7 @@
                             <li><a href="{{route('site.login')}}">Login</a></li>
                         @else
                             <li><a href="{{route('admin.cursos')}}">Cursos</a></li>
+                            <li><a href="{{route('admin.alunos')}}">Alunos</a></li>
                             <li><a href="#">{{Auth::user()->name}}</a></li>
                             <li><a href="{{route('site.login.sair')}}">Sair</a></li>
                         @endif
@@ -36,6 +37,7 @@
                     <li><a href="{{route('site.login')}}">Login</a></li>
                 @else
                     <li><a href="{{route('admin.cursos')}}">Cursos</a></li>
+                    <li><a href="{{route('admin.alunos')}}">Alunos</a></li>
                     <li><a href="#">{{Auth::user()->name}}</a></li>
                     <li><a href="{{route('site.login.sair')}}">Sair</a></li>
                 @endif

@@ -34,7 +34,7 @@ class CursoController extends Controller
         if ($req->hasfile('imagem')) {
             $imagem = $req->file('imagem');
             $num = rand(1111,9999);
-            $dir = "img/cursos/";
+            $dir = "img/cursos";
             $ex = $imagem->guessClientExtension();
             $nomeImagem = "imagem_".$num.".".$ex;
             $imagem->move($dir,$nomeImagem);
@@ -66,7 +66,7 @@ class CursoController extends Controller
         if ($req->hasfile('imagem')) {
             $imagem = $req->file('imagem');
             $num = rand(1111,9999);
-            $dir = "img/cursos/";
+            $dir = "img/cursos";
             $ex = $imagem->guessClientExtension();
             $nomeImagem = "imagem_".$num.".".$ex;
             $imagem->move($dir,$nomeImagem);
