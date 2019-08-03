@@ -40,6 +40,13 @@ Route::group(['middleware'=>'auth'], function () {
     Route::get('/admin/alunos/editar/{id}',['as'=>'admin.alunos.editar','uses'=>'Admin\AlunoController@editar']);
     Route::put('/admin/alunos/atualizar/{id}',['as'=>'admin.alunos.atualizar','uses'=>'Admin\AlunoController@atualizar']);
     Route::get('/admin/alunos/deletar/{id}',['as'=>'admin.alunos.deletar','uses'=>'Admin\AlunoController@deletar']);
+    // Matriculas
+    Route::get('/admin/matriculas',['as'=>'admin.matriculas','uses'=>'Admin\MatriculaController@index']);
+    Route::get('/admin/matriculas/adicionar',['as'=>'admin.matriculas.adicionar','uses'=>'Admin\MatriculaController@adicionar']);
+    Route::post('/admin/matriculas/salvar',['as'=>'admin.matriculas.salvar','uses'=>'Admin\MatriculaController@salvar']);
+    Route::get('/admin/matriculas/editar/{id}',['as'=>'admin.matriculas.editar','uses'=>'Admin\MatriculaController@editar']);
+    Route::put('/admin/matriculas/atualizar/{id}',['as'=>'admin.matriculas.atualizar','uses'=>'Admin\MatriculaController@atualizar']);
+    Route::get('/admin/matriculas/deletar/{id}',['as'=>'admin.matriculas.deletar','uses'=>'Admin\MatriculaController@deletar']);
 
 });
 

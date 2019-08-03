@@ -6,6 +6,7 @@
     $(document).ready(function(){
         Materialize.updateTexFields();
         $('.sidenav').sidenav();
+        $('select').formSelect();
     });
 </script>
 </body>

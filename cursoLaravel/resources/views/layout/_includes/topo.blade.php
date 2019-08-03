@@ -24,6 +24,7 @@
                         @else
                             <li><a href="{{route('admin.cursos')}}">Cursos</a></li>
                             <li><a href="{{route('admin.alunos')}}">Alunos</a></li>
+                            <li><a href="{{route('admin.matriculas')}}">Matriculas</a></li>
                             <li><a href="#">{{Auth::user()->name}}</a></li>
                             <li><a href="{{route('site.login.sair')}}">Sair</a></li>
                         @endif
@@ -38,6 +39,7 @@
                 @else
                     <li><a href="{{route('admin.cursos')}}">Cursos</a></li>
                     <li><a href="{{route('admin.alunos')}}">Alunos</a></li>
+                    <li><a href="{{route('admin.matriculas')}}">Matriculas</a></li>
                     <li><a href="#">{{Auth::user()->name}}</a></li>
                     <li><a href="{{route('site.login.sair')}}">Sair</a></li>
                 @endif
